@@ -332,8 +332,8 @@ function WeatherDate() {
 function PageBanner() {
   return (
     <div className="w-full h-32 md:h-44 rounded-2xl mb-6 overflow-hidden relative" style={{ background: "linear-gradient(135deg, #1a1a1f 0%, #2a1f3d 100%)" }}>
-      {/* PAGE_BANNER_IMAGE_SLOT: once you add your image, replace this comment with:
-          <img src={PAGE_BANNER_IMG} alt="" className="w-full h-full object-cover" /> */}
+    <img src={PAGE_BANNER_IMG} alt="" className="w-full h-full object-cover" /> 
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(5,5,5,0.55) 0%, rgba(5,5,5,0.75) 100%)" }} />
     </div>
   );
 }
