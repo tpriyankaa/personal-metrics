@@ -32,6 +32,7 @@ const BORDER = "rgba(255,255,255,0.08)";
 
 const AVATAR_IMG = `${import.meta.env.BASE_URL}avatar.webp`;
 const BANNER_IMG = `${import.meta.env.BASE_URL}banner.jpg`; // add your image as public/banner.jpg (or .png/.webp) — see instructions
+const PAGE_BANNER_IMG = `${import.meta.env.BASE_URL}page-banner.jpg`; // for the banner above the "Good Morning" card
 const DEFAULT_LAT = 23.2599;
 const DEFAULT_LON = 77.4126;
 const CATEGORIES = ["Coursework", "Project", "Placement Prep", "Personal"];
@@ -203,6 +204,7 @@ export default function App() {
       <div className="flex flex-col md:flex-row">
         <Sidebar tab={tab} setTab={setTab} />
         <main className="flex-1 px-5 py-6 md:px-10 md:py-8 max-w-6xl">
+          <PageBanner />
           <Hero stats={stats} />
           {tab === "overview" && <Overview tasks={tasks} stats={stats} log={log} addTask={addTask} toggleDone={toggleDone} />}
           {tab === "tasks" && <Tasks tasks={tasks} addTask={addTask} toggleDone={toggleDone} setStatus={setStatus} deleteTask={deleteTask} />}
@@ -323,6 +325,15 @@ function WeatherDate() {
       <span className="font-mono text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5" style={{ background: "rgba(255,255,255,0.14)", color: "#fff" }}>
         <Cloud size={13} /> {temp === null ? "…" : `${temp}°C`}
       </span>
+    </div>
+  );
+}
+
+function PageBanner() {
+  return (
+    <div className="w-full h-32 md:h-44 rounded-2xl mb-6 overflow-hidden relative" style={{ background: "linear-gradient(135deg, #1a1a1f 0%, #2a1f3d 100%)" }}>
+      {/* PAGE_BANNER_IMAGE_SLOT: once you add your image, replace this comment with:
+          <img src={PAGE_BANNER_IMG} alt="" className="w-full h-full object-cover" /> */}
     </div>
   );
 }
