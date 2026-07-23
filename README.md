@@ -2,7 +2,7 @@
 
 A sleek, lightweight personal productivity dashboard built to streamline your daily workflow. Track tasks, view productivity metrics, and log daily activities from a single, centralized interface.
 
-![Dashboard Preview](https://placeholder.com)
+![Dashboard Preview](screenshot.png) 
 
 ---
 
